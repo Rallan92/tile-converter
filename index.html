@@ -8,12 +8,12 @@
 <body>
   <h1>Tile Conversion Tool</h1>
 
-  <section>
-    <h2>Tiles to Feet</h2>
-    <label>Tiles Wide: <input type="number" id="tilesWidth"></label><br>
-    <label>Tiles Deep: <input type="number" id="tilesDepth"></label><br>
-    <button onclick="tilesToFeet()">Convert</button>
-    <p id="tilesToFeetResult"></p>
+ <section>
+    <h2>Feet to Tiles</h2>
+    <label>Width (feet): <input type="number" id="feetWidth" step="0.01"></label><br>
+    <label>Length (feet): <input type="number" id="feetLength" step="0.01"></label><br>
+    <button onclick="feetToTiles()">Convert</button>
+    <p id="feetToTilesResult"></p>
   </section>
 
   <section>
@@ -22,6 +22,14 @@
     <label>Length (metres): <input type="number" id="metreLength" step="0.01"></label><br>
     <button onclick="metresToTiles()">Convert</button>
     <p id="metresToTilesResult"></p>
+  </section>
+  
+  <section>
+    <h2>Tiles to Feet</h2>
+    <label>Tiles Wide: <input type="number" id="tilesWidth"></label><br>
+    <label>Tiles Deep: <input type="number" id="tilesDepth"></label><br>
+    <button onclick="tilesToFeet()">Convert</button>
+    <p id="tilesToFeetResult"></p>
   </section>
 
   <script src="script.js"></script>
