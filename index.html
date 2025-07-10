@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tile Conversion Tool</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Tile Conversion Tool</h1>
+
+  <section>
+    <h2>Tiles to Feet</h2>
+    <label>Tiles Wide: <input type="number" id="tilesWidth"></label><br>
+    <label>Tiles Deep: <input type="number" id="tilesDepth"></label><br>
+    <button onclick="tilesToFeet()">Convert</button>
+    <p id="tilesToFeetResult"></p>
+  </section>
+
+  <section>
+    <h2>Metres to Tiles</h2>
+    <label>Width (metres): <input type="number" id="metreWidth" step="0.01"></label><br>
+    <label>Length (metres): <input type="number" id="metreLength" step="0.01"></label><br>
+    <button onclick="metresToTiles()">Convert</button>
+    <p id="metresToTilesResult"></p>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
