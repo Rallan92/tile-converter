@@ -1,12 +1,15 @@
-function tilesToFeet() {
-  const tilesWidth = parseInt(document.getElementById('tilesWidth').value);
-  const tilesDepth = parseInt(document.getElementById('tilesDepth').value);
+function feetToTiles() {
+  const fWidth = parseFloat(document.getElementById('feetWidth').value);
+  const fLength = parseFloat(document.getElementById('feetLength').value);
 
-  const ftWidth = (tilesWidth * 32) / 12;
-  const ftDepth = (tilesDepth * 32) / 12;
+  const tileWidth = fWidth * 12 / 32;
+  const tileLength = fLength * 12 / 32;
 
-  document.getElementById('tilesToFeetResult').innerText =
-    `Width: ${ftWidth.toFixed(2)} feet\nLength: ${ftDepth.toFixed(2)} feet`;
+  const widthRounded = Math.round(tileWidth);
+  const lengthRounded = Math.round(tileLength);
+
+  document.getElementById('feetToTilesResult').innerText =
+    `Width: ${widthRounded} tiles\nLength: ${lengthRounded} tiles`;
 }
 
 function metresToTiles() {
@@ -21,4 +24,15 @@ function metresToTiles() {
 
   document.getElementById('metresToTilesResult').innerText =
     `Width: ${widthRounded} tiles\nLength: ${lengthRounded} tiles`;
+}
+
+function tilesToFeet() {
+  const tilesWidth = parseInt(document.getElementById('tilesWidth').value);
+  const tilesDepth = parseInt(document.getElementById('tilesDepth').value);
+
+  const ftWidth = (tilesWidth * 32) / 12;
+  const ftDepth = (tilesDepth * 32) / 12;
+
+  document.getElementById('tilesToFeetResult').innerText =
+    `Width: ${ftWidth.toFixed(2)} feet\nLength: ${ftDepth.toFixed(2)} feet`;
 }
